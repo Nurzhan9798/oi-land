@@ -1,0 +1,7 @@
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+/build
+node_modules
