@@ -1,8 +1,7 @@
+import {AppRouter} from "app/providers/router";
 import {useTheme} from "app/providers/ThemeProvider";
-import {AboutPage} from "pages/AboutPage";
-import {MainPage} from "pages/MainPage";
-import {Suspense} from "react";
-import {Link, Route, Routes,} from "react-router-dom";
+import React from "react";
+import {Link,} from "react-router-dom";
 import './styles/index.scss'
 
 
@@ -15,12 +14,7 @@ export const App = () => {
             <h1>App</h1>
             <Link to={"/"}>main page</Link>
             <Link to={"/about"}>about page</Link>
-            <Suspense>
-                <Routes>
-                    <Route path={"/"} element={<MainPage />}/>
-                    <Route path={"/about"} element={<AboutPage />}/>
-                </Routes>
-            </Suspense>
+            <AppRouter/>
 
         </div>
     );
